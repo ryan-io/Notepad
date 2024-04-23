@@ -3,10 +3,15 @@ notepad-src_autogen/timestamp: \
   CMakeFiles/3.22.1/CMakeSystem.cmake \
   notepad-src_autogen/moc_predefs.h \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/CMakeLists.txt \
+  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecontent.cpp \
+  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecontent.h \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/images/images.qrc \
+  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/logging.cpp \
+  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/logging.h \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/main.cpp \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.cpp \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.h \
+  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/readwritesave.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20functional.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20memory.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20type_traits.h \
@@ -653,22 +658,75 @@ notepad-src_autogen/timestamp: \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in \
+  /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp \
   /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake \
   /usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake \
   /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake \
   /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake \
   /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake \
   /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in \
   /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake \
   /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake \
   /usr/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake \
   /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake \
+  /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in \
   /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake \
   /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake \
   /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake \
   /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+  /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /usr/share/cmake-3.22/Modules/FeatureSummary.cmake \
   /usr/share/cmake-3.22/Modules/FindOpenGL.cmake \
   /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake \
@@ -679,7 +737,9 @@ notepad-src_autogen/timestamp: \
   /usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake \
   /usr/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake \
   /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake \
+  /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake \
   /usr/share/cmake-3.22/Modules/MacroAddFileDependencies.cmake \
+  /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake \
   /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake \
   /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake \
   /usr/share/cmake-3.22/Modules/Platform/Linux.cmake \

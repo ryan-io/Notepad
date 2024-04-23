@@ -68,6 +68,7 @@ public:
         verticalLayout->setObjectName("verticalLayout");
         textEditor = new QTextEdit(centralwidget);
         textEditor->setObjectName("textEditor");
+        textEditor->setStyleSheet(QString::fromUtf8("border-color: rgb(28, 113, 216);"));
         textEditor->setTabChangesFocus(true);
 
         verticalLayout->addWidget(textEditor);

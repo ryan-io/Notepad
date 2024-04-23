@@ -2,6 +2,9 @@
 /home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.cpp
  uic:./ui_notepad.h
 /home/ryanio/Documents/dev/qt/Notepad/notepad-src/main.cpp
+/home/ryanio/Documents/dev/qt/Notepad/notepad-src/logging.cpp
+/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecontent.cpp
+/home/ryanio/Documents/dev/qt/Notepad/notepad-src/readwritesave.h
 /home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.h
  mmc:Q_OBJECT
  mdp:/home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.h
@@ -408,3 +411,5 @@
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
  mdp:/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h
+/home/ryanio/Documents/dev/qt/Notepad/notepad-src/logging.h
+/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecontent.h

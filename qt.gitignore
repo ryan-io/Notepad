@@ -71,3 +71,5 @@ Thumbs.db
 *.dll
 *.exe
 
+./build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug
+/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/*

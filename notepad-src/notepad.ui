@@ -22,6 +22,9 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QTextEdit" name="textEditor">
+        <property name="styleSheet">
+         <string notr="true">border-color: rgb(28, 113, 216);</string>
+        </property>
         <property name="tabChangesFocus">
          <bool>true</bool>
         </property>
