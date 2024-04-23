@@ -20,6 +20,10 @@ set(PROJECT_SOURCES
         notepad.h
         notepad.ui
         images/images.qrc
+        logging.h
+        logging.cpp
+        filecontent.cpp
+        filecontent.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
