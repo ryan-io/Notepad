@@ -1,5 +1,0 @@
-/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeFiles/notepad-src.dir
-/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeFiles/edit_cache.dir
-/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeFiles/rebuild_cache.dir
-/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeFiles/notepad-src_autogen_timestamp_deps.dir
-/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeFiles/notepad-src_autogen.dir

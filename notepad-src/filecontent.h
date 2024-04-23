@@ -2,6 +2,7 @@
 #include "readwritesave.h"
 #include <QApplication>
 #include <QDateTime>
+#include <QDir>
 #include <QFile>
 #include <QObject>
 #include <mutex>
@@ -13,7 +14,7 @@ public:
 
   // returns the application directory where logs are being written to
   QString defaultDirectory() {
-    return m_application->applicationDirPath() + "/";
+    return m_application->applicationDirPath() + QDir::separator();
   }
 
   // writes to the internal QString buffer
@@ -37,4 +38,6 @@ private:
   QApplication *m_application;
   std::mutex m_write{};
   std::mutex m_read{};
+
+  constexpr static qint16 STATLE_LOCK_TIME_MILLISECONDS = 15000;
 };

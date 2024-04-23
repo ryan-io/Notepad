@@ -7,9 +7,6 @@ int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   Log log{&a};
 
-  log.Info("Hola!");
-  log.Warning("Hola!");
-  log.Error("Hola!");
   Notepad w;
   w.show();
 

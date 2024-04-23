@@ -1,5 +1,6 @@
 #include "filecontent.h"
 #include "QFile"
+#include "QLockFile"
 
 FileContent::FileContent(QApplication *app) : m_application(app) {}
 
@@ -23,18 +24,30 @@ bool FileContent::save(QString fileName) {
 bool FileContent::save(QString fileName, QString path) {
   QFile output(path + '/' + fileName);
 
-  std::lock_guard<std::mutex> lock(m_read);
-  if (!output.open(QIODevice::Append))
-    return false;
+  QLockFile lock(output.fileName() + "_lock");
+  lock.setStaleLockTime(FileContent::STATLE_LOCK_TIME_MILLISECONDS);
 
-  QByteArray data;
-  data.append(
-      m_output.toLocal8Bit()); // change this at a later point in time if needed
+  if (lock.tryLock()) {
+    if (!output.open(QIODevice::Append)) {
+      lock.unlock();
+      return false;
+    }
 
-  output.write(data);
-  output.close();
+    QByteArray data;
+    data.append(
+        m_output
+            .toLocal8Bit()); // change this at a later point in time if needed
 
-  reset();
+    output.write(data);
+    output.close();
+
+    reset();
+  } else {
+    qWarning() << "Error: Could not write to file " << fileName;
+    // output some info from lock info (pid, host, application, etc.)
+  }
+
+  lock.unlock();
 
   return true;
 }
