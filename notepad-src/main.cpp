@@ -6,8 +6,9 @@
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   Log log{&a};
-
-  Notepad w;
+  qInfo() << "Logging to " << log.logDirectory();
+  log.info("Logging stated");
+  Notepad w{&a, &log};
   w.show();
 
   return a.exec();

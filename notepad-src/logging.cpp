@@ -2,24 +2,24 @@
 #include <QDebug>
 #include <thread>
 
-void Log::Info(QString msg) {
+void Log::info(QString msg) {
   process("INFO: " + msg);
   qInfo() << msg;
 }
 
-void Log::Warning(QString msg) {
+void Log::warning(QString msg) {
   process("WARNING: " + msg);
   qWarning() << msg;
 }
 
-void Log::Error(QString msg) {
+void Log::error(QString msg) {
   process("ERROR: " + msg);
   qCritical() << msg;
 }
 
-void Log::process(QString msg) {
-  qInfo() << "Writing to " << m_content.defaultDirectory();
+QString Log::logDirectory() { return m_content.defaultDirectory(); }
 
-  m_content.write(msg);
+void Log::process(QString msg) {
+  m_content.write(stamp() + msg);
   m_content.save(fileName);
 }

@@ -4,6 +4,8 @@
 
 FileContent::FileContent(QApplication *app) : m_application(app) {}
 
+const QString &FileContent::getContent() const { return m_output; }
+
 FileContent::~FileContent() = default;
 
 void FileContent::write(QString content) {

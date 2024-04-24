@@ -9,9 +9,10 @@ class Log {
 public:
   Log(QApplication *app) : m_content(FileContent{app}) {}
   ~Log() {}
-  void Info(QString msg);
-  void Warning(QString msg);
-  void Error(QString msg);
+  void info(QString msg);
+  void warning(QString msg);
+  void error(QString msg);
+  QString logDirectory();
 
 private:
   FileContent m_content;

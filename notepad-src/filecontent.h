@@ -12,6 +12,9 @@ public:
   FileContent(QApplication *app);
   ~FileContent() override;
 
+  // returns a constant reference to m_output
+  const QString &getContent() const;
+
   // returns the application directory where logs are being written to
   QString defaultDirectory() {
     return m_application->applicationDirPath() + QDir::separator();
@@ -39,5 +42,5 @@ private:
   std::mutex m_write{};
   std::mutex m_read{};
 
-  constexpr static qint16 STATLE_LOCK_TIME_MILLISECONDS = 15000;
+  constexpr static int STATLE_LOCK_TIME_MILLISECONDS = 15000;
 };

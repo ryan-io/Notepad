@@ -2,6 +2,9 @@
 
 #include <QMainWindow>
 
+#include "filecontent.h"
+#include "logging.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Notepad;
@@ -12,13 +15,18 @@ class Notepad : public QMainWindow {
   Q_OBJECT
 
 public:
-  Notepad(QWidget *parent = nullptr);
+  Notepad(QApplication *app, Log *logger, QWidget *parent = nullptr);
   ~Notepad();
 
 private slots:
-  void onNewDocument();
+  void on_actionNew_triggered();
+
+  void on_actionOpen_triggered();
 
 private:
   Ui::Notepad *ui;
-  QString m_currentFile;
+  Log *m_logger;
+  FileContent m_file;
+  const QString LOCK_SUFFIX = "_lock";
+  static constexpr int STALE_LOCK_TIME = 3000;
 };
