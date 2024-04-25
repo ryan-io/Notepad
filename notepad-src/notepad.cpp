@@ -63,3 +63,5 @@ void Notepad::on_actionOpen_triggered() {
   lock.unlock();
   file.close();
 }
+
+void Notepad::on_actionSave_triggered() {}
