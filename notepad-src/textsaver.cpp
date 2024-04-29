@@ -31,6 +31,7 @@ IOResponse TextSaver::save(File *file, QString fileName, QString path) {
 
     output.write(data);
     output.close();
+
   } else {
     QString fError = "Error: Could not write to file " + fileName;
     // output some info from lock info (pid, host, application, etc.)

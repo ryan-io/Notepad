@@ -78,3 +78,56 @@ Log - INFO: Logging stated
 Log - INFO: onActionOpen invoked
 Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
 Log - INFO: Setting in-memory file content
+Log - INFO: Logging stated
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: Logging stated
+Log - INFO: Logging stated
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: onActionSaved invoked
+Log - INFO: Logging stated
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: onActionSaved invoked
+Log - INFO: Logging stated
+Log - INFO: onActionOpen invoked
+Log - INFO: File read: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Log - INFO: Setting in-memory file content
+Log - INFO: onActionSaved invoked
+Log - INFO: File successfully saved.
+Log - INFO: Logging stated
+Log - INFO: Logging stated
+Log - INFO: onActionSaved invoked
+Log - INFO: Logging stated
+Log - INFO: onActionSaved invoked
+Log - ERROR: Could not open file.

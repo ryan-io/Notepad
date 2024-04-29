@@ -6,6 +6,7 @@
 #include "QTextStream"
 #include "textreader.h"
 #include "textresetter.h"
+#include "textsaver.h"
 #include "textwriter.h"
 
 Notepad::Notepad(QApplication *app, Log *logger, QWidget *parent)
@@ -62,4 +63,19 @@ void Notepad::on_actionOpen_triggered() {
   setWindowTitle(readResponse.response["filepath"]);
 }
 
-void Notepad::on_actionSave_triggered() {}
+void Notepad::on_actionSave_triggered() {
+  m_logger->info("onActionSaved invoked");
+
+  TextSaver ts{m_file.directory()};
+
+  // if (m_file.getFileName ().isEmpty ()) {
+  auto newName = QFileDialog::getSaveFileName(this, "Save");
+  //}
+
+  auto response = ts.save(&m_file);
+
+  if (response.isError)
+    m_logger->error(response.response["error"]);
+  else
+    m_logger->info(response.response["ok"]);
+}
