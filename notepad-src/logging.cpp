@@ -1,4 +1,6 @@
 #include "logging.h"
+#include "textsaver.h"
+#include "textwriter.h"
 #include <QDebug>
 #include <thread>
 
@@ -17,9 +19,12 @@ void Log::error(QString msg) {
   qCritical() << msg;
 }
 
-QString Log::logDirectory() { return m_content.defaultDirectory(); }
+QString Log::logDirectory() { return m_content.directory(); }
 
 void Log::process(QString msg) {
-  m_content.write(stamp() + msg);
-  m_content.save(fileName);
+  TextWriter tw{this};
+  tw.writeAppend(m_content, "Log - " + msg);
+
+  TextSaver ts{m_content.directory(), this};
+  ts.save(&m_content, fileName);
 }

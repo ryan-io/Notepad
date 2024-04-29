@@ -2,7 +2,7 @@
 
 #include <QMainWindow>
 
-#include "filecontent.h"
+#include "file.h"
 #include "logging.h"
 
 QT_BEGIN_NAMESPACE
@@ -23,10 +23,10 @@ private slots:
 
   void on_actionOpen_triggered();
 
+  void on_actionSave_triggered();
+
 private:
   Ui::Notepad *ui;
   Log *m_logger;
-  FileContent m_file;
-  const QString LOCK_SUFFIX = "_lock";
-  static constexpr int STALE_LOCK_TIME = 3000;
+  File m_file;
 };

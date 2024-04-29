@@ -1,0 +1,26 @@
+# ninja log v5
+276	1741	1714413265673826863	CMakeFiles/notepad-src.dir/textreader.cpp.o	3b985848bb032c99
+276	1696	1714413265625826702	CMakeFiles/notepad-src.dir/textsaver.cpp.o	6af24c643b6a760c
+18	1300	1714413347294104128	CMakeFiles/notepad-src.dir/textwriter.cpp.o	7127ed47ac1ad0e2
+216	238	1714400417315497027	/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp	a1487b19070973a3
+238	1518	1714400418595494887	CMakeFiles/notepad-src.dir/filecontent.cpp.o	c32c83c0f3bf522
+278	1631	1714412836996659148	CMakeFiles/notepad-src.dir/file.cpp.o	7d9c10d5c33cabd5
+276	1627	1714413265557826478	CMakeFiles/notepad-src.dir/notepad-src_autogen/mocs_compilation.cpp.o	fed6c3ca167cb434
+276	1612	1714413265541826423	CMakeFiles/notepad-src.dir/main.cpp.o	1c7b2ba7e58c3724
+1549	1812	1714413347806105905	notepad-src	4d6645ec28f737f6
+18	1549	1714413347546105002	CMakeFiles/notepad-src.dir/notepad.cpp.o	d7df6b7fd8c756c3
+19	1197	1714413278897870912	CMakeFiles/notepad-src.dir/logging.cpp.o	2631bbffa0f2cc83
+1	17	1714413346014099684	/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/timestamp	dc75abd1333f2668
+1	17	1714413346014099684	notepad-src_autogen/mocs_compilation.cpp	dc75abd1333f2668
+1	17	1714413346014099684	notepad-src_autogen/timestamp	dc75abd1333f2668
+238	298	1714400417375496929	CMakeFiles/notepad-src.dir/notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp.o	8e71a2dcda26d4b
+1	17	1714413346014099684	/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/mocs_compilation.cpp	dc75abd1333f2668
+216	238	1714400417315497027	notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp	a1487b19070973a3
+276	1537	1714413265469826185	CMakeFiles/notepad-src.dir/textresetter.cpp.o	63766a574f13d51b
+1	17	1714413442858443479	notepad-src_autogen/timestamp	dc75abd1333f2668
+1	17	1714413442858443479	notepad-src_autogen/mocs_compilation.cpp	dc75abd1333f2668
+1	17	1714413442858443479	/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/timestamp	dc75abd1333f2668
+1	17	1714413442858443479	/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/mocs_compilation.cpp	dc75abd1333f2668
+18	1275	1714413444114448033	CMakeFiles/notepad-src.dir/textwriter.cpp.o	7127ed47ac1ad0e2
+18	1542	1714413444382449005	CMakeFiles/notepad-src.dir/notepad.cpp.o	d7df6b7fd8c756c3
+1542	1812	1714413444650449977	notepad-src	4d6645ec28f737f6

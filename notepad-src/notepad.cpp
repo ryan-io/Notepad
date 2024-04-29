@@ -4,6 +4,8 @@
 #include "QLockFile"
 #include "QMessageBox"
 #include "QTextStream"
+#include "textreader.h"
+#include "textresetter.h"
 
 Notepad::Notepad(QApplication *app, Log *logger, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::Notepad), m_file(app), m_logger(logger) {
@@ -21,47 +23,27 @@ void Notepad::on_actionNew_triggered() {
     qWarning() << "No logger supplied";
   }
 
-  m_file.reset(); // clears string; null
+  TextResetter tr{m_logger};
+  // clears string; invokes QString.clear()
+  tr.reset(&m_file);
 
   // set the text in the editor to an empty string
   ui->textEditor->setText(m_file.getContent());
 }
 
 void Notepad::on_actionOpen_triggered() {
-  QString fileName = QFileDialog::getOpenFileName(this, "Open a file");
+  TextReader reader{m_logger};
+  auto readResponse = reader.read(this);
 
-  if (fileName.isEmpty()) {
-    m_logger->warning("File name is empty");
+  if (readResponse.isError) {
+    QMessageBox::warning(this, "Warning", readResponse.response["error"]);
     return;
   }
 
-  m_logger->info("Attempting to open file " + fileName);
-  QFile file(fileName);
-
-  QLockFile lock(file.fileName() + LOCK_SUFFIX);
-  lock.setStaleLockTime(STALE_LOCK_TIME);
-
-  if (!lock.tryLock(STALE_LOCK_TIME)) {
-    m_logger->error("Could not lock file");
-    return;
-  }
-
-  if (!file.open(QIODevice::ReadOnly)) {
-    m_logger->error(file.errorString());
-    QMessageBox::warning(this, "Warning",
-                         "Could not open file - " + file.errorString());
-    return;
-  }
-
-  setWindowTitle(fileName);
-  QTextStream str(&file);
-  QString content = str.readAll();
-
-  m_file.write(content);
-  ui->textEditor->setText(m_file.getContent());
-
-  lock.unlock();
-  file.close();
+  // m_file.setContent(readResponse.response["content"]); // you can do this,
+  // best practice to let the writer run any pre-processing
+  ui->textEditor->setText(readResponse.response["content"]);
+  setWindowTitle(readResponse.response["filepath"]);
 }
 
 void Notepad::on_actionSave_triggered() {}

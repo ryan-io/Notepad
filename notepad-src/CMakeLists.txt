@@ -22,9 +22,23 @@ set(PROJECT_SOURCES
         images/images.qrc
         logging.h
         logging.cpp
-        filecontent.cpp
-        filecontent.h
-        readwritesave.h
+        file.h
+        file.cpp
+        content.h
+        filereader.h
+        filewriter.h
+        fileresetter.h
+        filesaver.h
+        textreader.cpp
+        textreader.h
+        ioresponse.h
+        textresetter.h
+        textresetter.cpp
+        textwriter.h
+        textwriter.cpp
+        textsaver.h
+        textsaver.cpp
+        constant.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -1,13 +1,14 @@
 #pragma once
 
+#include "file.h"
+
+#include <QApplication>
 #include <QDateTime>
 #include <QObject>
 
-#include "filecontent.h"
-
 class Log {
 public:
-  Log(QApplication *app) : m_content(FileContent{app}) {}
+  Log(QApplication *app) : m_content(File{app}) {}
   ~Log() {}
   void info(QString msg);
   void warning(QString msg);
@@ -15,8 +16,7 @@ public:
   QString logDirectory();
 
 private:
-  FileContent m_content;
-  QString stamp() { return QDateTime::currentDateTime().toString() + ": "; }
+  File m_content;
   void process(QString msg);
   const QString fileName = "log.txt";
 };
