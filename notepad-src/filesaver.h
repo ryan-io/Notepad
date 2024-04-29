@@ -7,6 +7,9 @@
 
 class FileSaver {
 public:
+  // saves the current file with respect to file.getFileName()
+  virtual IOResponse save(File *file) = 0;
+
   // saves the log to the current working directory
   // this method invokes reset() if save was successful
   // returns false if save was unsuccessful

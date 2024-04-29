@@ -6,7 +6,7 @@
 
 class TextWriter : public FileWriter {
 public:
-  TextWriter(Log *logger) : m_logger(logger){};
+  TextWriter(){};
   ~TextWriter() override = default;
 
   // FileWriter interface
@@ -14,6 +14,5 @@ public:
   IOResponse writeAppend(File &file, QString content) override;
 
 private:
-  Log *m_logger = nullptr;
   std::mutex m_writeLock;
 };

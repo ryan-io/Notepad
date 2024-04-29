@@ -22,9 +22,9 @@ void Log::error(QString msg) {
 QString Log::logDirectory() { return m_content.directory(); }
 
 void Log::process(QString msg) {
-  TextWriter tw{this};
+  TextWriter tw{};
   tw.writeAppend(m_content, "Log - " + msg);
 
-  TextSaver ts{m_content.directory(), this};
+  TextSaver ts{m_content.directory()};
   ts.save(&m_content, fileName);
 }

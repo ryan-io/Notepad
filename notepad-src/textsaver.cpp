@@ -3,6 +3,10 @@
 
 #include <QLockFile>
 
+IOResponse TextSaver::save(File *file) {
+  return save(file, file->getFileName(), m_defaultDir);
+}
+
 IOResponse TextSaver::save(File *file, QString fileName) {
   return save(file, fileName, m_defaultDir);
 }
@@ -17,7 +21,6 @@ IOResponse TextSaver::save(File *file, QString fileName, QString path) {
     if (!output.open(QIODevice::Append)) {
       lock.unlock();
       QString fError = "Could not open file.";
-      m_logger->error(fError);
       return IOResponse{true, {std::make_pair("error", fError)}};
     }
 
@@ -30,7 +33,6 @@ IOResponse TextSaver::save(File *file, QString fileName, QString path) {
     output.close();
   } else {
     QString fError = "Error: Could not write to file " + fileName;
-    m_logger->error(fError);
     // output some info from lock info (pid, host, application, etc.)
     return IOResponse{true, {std::make_pair("error", fError)}};
   }

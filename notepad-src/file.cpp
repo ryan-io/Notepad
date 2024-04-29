@@ -1,13 +1,18 @@
 #include "file.h"
+#include <shared_mutex>
 
-File::File(QApplication *app) : m_application(app) {}
+File::File(QApplication *app, QString fileName) : m_application(app) {}
 
 QString File::directory() {
   return m_application->applicationDirPath() + QDir::separator();
 }
 
-const QString &File::getContent() const {
-  std::shared_lock<std::shared_mutex>(m_readMutex);
+QString File::getFileName() const { return m_fileName; }
+
+QString File::setFileName(QString &newName) { m_fileName = newName; }
+
+QString &File::getContent() {
+  std::shared_lock<std::shared_mutex> l(m_readMutex);
   return m_output;
 }
 

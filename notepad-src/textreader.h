@@ -5,7 +5,7 @@
 
 class TextReader : public FileReader {
 public:
-  TextReader(Log *logger) : m_logger(logger){};
+  TextReader(){};
 
   // returns an IOResponse
   // isError will be set to true if cannot open, lock, or file is readonly
@@ -15,7 +15,4 @@ public:
   //      "content" returns QString with read content
   IOResponse read(QWidget *parent) override;
   ~TextReader() override = default;
-
-private:
-  Log *m_logger = nullptr;
 };

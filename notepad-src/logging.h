@@ -8,7 +8,7 @@
 
 class Log {
 public:
-  Log(QApplication *app) : m_content(File{app}) {}
+  Log(QApplication *app) : m_content(File{app, "log.txt"}) {}
   ~Log() {}
   void info(QString msg);
   void warning(QString msg);

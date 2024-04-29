@@ -5,7 +5,7 @@
 
 class TextResetter : public FileResetter {
 public:
-  TextResetter(Log *logger) : m_logger(logger) {}
+  TextResetter() {}
   ~TextResetter() override = default;
 
   // returns an IOResponse
@@ -15,7 +15,4 @@ public:
   // good-reponse map:
   //      "ok" -> generic message stating reset was successful
   IOResponse reset(File *file) override;
-
-private:
-  Log *m_logger = nullptr;
 };

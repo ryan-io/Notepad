@@ -2,9 +2,6 @@
 
 IOResponse TextWriter::write(File &file, QString content) {
   const QString okOut = "Writing content to file object.";
-
-  m_logger->info(okOut);
-
   // std::lock_guard<std::mutex> lock(m_writeLock);
 
   file.m_output.clear();
@@ -16,8 +13,6 @@ IOResponse TextWriter::write(File &file, QString content) {
 
 IOResponse TextWriter::writeAppend(File &file, QString content) {
   const QString okOut = "Appending content to file object.";
-
-  // m_logger->info(okOut);
 
   // std::lock_guard<std::mutex> lock(m_writeLock);
 
