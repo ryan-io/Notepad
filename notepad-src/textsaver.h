@@ -9,10 +9,15 @@ public:
   virtual ~TextSaver() = default;
 
   // FileSaver interface
-  IOResponse save(File *file) override;
-  IOResponse save(File *file, QString fileName) override;
-  IOResponse save(File *file, QString fileName, QString path) override;
+  IOResponse save(File *file, SaveFlag flag = QIODevice::Append) override;
+  IOResponse save(File *file, QString fileName,
+                  SaveFlag flag = QIODevice::Append) override;
+  IOResponse save(File *file, QString fileName, QString path,
+                  SaveFlag flag = QIODevice::Append) override;
+
+  void AppendData();
 
 private:
+  void AppendData(QFile *output, File *file);
   const QString m_defaultDir;
 };

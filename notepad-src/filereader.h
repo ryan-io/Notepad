@@ -6,6 +6,6 @@
 
 class FileReader {
 public:
-  virtual IOResponse read(QWidget *parent) = 0;
+  virtual IOResponse read(QWidget *parent, QString &filePath) = 0;
   virtual ~FileReader() = default;
 };

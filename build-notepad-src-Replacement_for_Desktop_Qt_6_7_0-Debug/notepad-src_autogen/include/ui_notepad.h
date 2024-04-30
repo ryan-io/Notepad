@@ -102,7 +102,7 @@ public:
         Notepad->setWindowTitle(QCoreApplication::translate("Notepad", "Notepad Application", nullptr));
         actionNew->setText(QCoreApplication::translate("Notepad", "New", nullptr));
         actionOpen->setText(QCoreApplication::translate("Notepad", "Open", nullptr));
-        actionSave->setText(QCoreApplication::translate("Notepad", "Save", nullptr));
+        actionSave->setText(QCoreApplication::translate("Notepad", "Save As", nullptr));
         file->setTitle(QCoreApplication::translate("Notepad", "File", nullptr));
     } // retranslateUi
 

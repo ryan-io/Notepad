@@ -40,10 +40,11 @@ void Notepad::on_actionNew_triggered() {
 }
 
 void Notepad::on_actionOpen_triggered() {
+  QString filePath = QFileDialog::getOpenFileName(this, "Open a file");
   TextReader reader{};
 
   m_logger->info("onActionOpen invoked");
-  auto readResponse = reader.read(this);
+  auto readResponse = reader.read(this, filePath);
 
   if (readResponse.isError) {
     m_logger->error(readResponse.response["error"]);
@@ -52,7 +53,6 @@ void Notepad::on_actionOpen_triggered() {
   }
 
   m_logger->info("File read: " + readResponse.response["filepath"]);
-
   m_logger->info("Setting in-memory file content");
 
   TextWriter tw{};
@@ -60,6 +60,7 @@ void Notepad::on_actionOpen_triggered() {
   tw.write(m_file, readResponse.response["content"]);
 
   ui->textEditor->setText(readResponse.response["content"]);
+  m_file.setFileName(readResponse.response["filepath"]);
   setWindowTitle(readResponse.response["filepath"]);
 }
 
@@ -72,7 +73,8 @@ void Notepad::on_actionSave_triggered() {
   auto newName = QFileDialog::getSaveFileName(this, "Save");
   //}
 
-  auto response = ts.save(&m_file);
+  qInfo() << "Saving as " << newName;
+  auto response = ts.save(&m_file, newName, QIODevice::WriteOnly);
 
   if (response.isError)
     m_logger->error(response.response["error"]);
