@@ -81,3 +81,5 @@ void Notepad::on_actionSave_triggered() {
   else
     m_logger->info(response.response["ok"]);
 }
+
+void Notepad::on_actionSave_As_triggered() {}

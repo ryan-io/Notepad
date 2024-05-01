@@ -1,10 +1,22 @@
 #include "textreader.h"
 
 #include "constant.h"
+#include <QFile>
 #include <QFileDialog>
 #include <QLockFile>
 #include <QMessageBox>
 #include <QString>
+
+class OpenFilePrompt {
+public:
+  QFile Open(QWidget *owner) {
+    auto fileName = QFileDialog::getOpenFileName(owner, PROMPT_WINDOW_NAME);
+    return QFile(fileName);
+  }
+
+private:
+  const QString PROMPT_WINDOW_NAME = "Open File";
+};
 
 // returns an IOResponse with the following characteristics
 //      "error"-> if file path is empty
@@ -17,6 +29,7 @@ IOResponse TextReader::read(QWidget *parent, QString &filePath) {
     return IOResponse{true, {std::make_pair("error", fError)}};
   };
 
+  QLockFile lockedFile(filePath);
   QFile file(filePath);
 
   if (!file.open(QIODevice::ReadOnly)) {

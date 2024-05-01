@@ -10,7 +10,7 @@
 // characterizes a simple text string file
 class File : public Content {
 public:
-  File(QApplication *app, QString fileName);
+  File(QApplication *app, const QString fileName);
   ~File() = default;
 
   // returns the application directory where logs are being written to
@@ -18,10 +18,10 @@ public:
 
   QString getFileName() const;
 
-  QString setFileName(QString &newName);
+  void setFileName(const QString &newName);
 
   // returns a constant reference to m_output
-  QString &getContent() override;
+  const QString &getContent() const override;
 
   // sets the internal QString field
   void setContent(const QString &newContent) override;
@@ -33,8 +33,6 @@ private:
   QString m_output{};
   QString m_fileName{};
   QApplication *m_application = nullptr;
-  std::mutex m_writeMutex{};
-  std::shared_mutex m_readMutex;
   friend class TextResetter;
   friend class TextWriter;
   friend class Log;

@@ -28,6 +28,7 @@ public:
     QAction *actionNew;
     QAction *actionOpen;
     QAction *actionSave;
+    QAction *actionSave_As;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
@@ -57,6 +58,11 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/save.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave->setIcon(icon2);
+        actionSave_As = new QAction(Notepad);
+        actionSave_As->setObjectName("actionSave_As");
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/save_as.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionSave_As->setIcon(icon3);
         centralwidget = new QWidget(Notepad);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -91,6 +97,7 @@ public:
         file->addAction(actionNew);
         file->addAction(actionOpen);
         file->addAction(actionSave);
+        file->addAction(actionSave_As);
 
         retranslateUi(Notepad);
 
@@ -102,7 +109,11 @@ public:
         Notepad->setWindowTitle(QCoreApplication::translate("Notepad", "Notepad Application", nullptr));
         actionNew->setText(QCoreApplication::translate("Notepad", "New", nullptr));
         actionOpen->setText(QCoreApplication::translate("Notepad", "Open", nullptr));
-        actionSave->setText(QCoreApplication::translate("Notepad", "Save As", nullptr));
+        actionSave->setText(QCoreApplication::translate("Notepad", "Save", nullptr));
+#if QT_CONFIG(tooltip)
+        actionSave->setToolTip(QCoreApplication::translate("Notepad", "Save", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionSave_As->setText(QCoreApplication::translate("Notepad", "Save As", nullptr));
         file->setTitle(QCoreApplication::translate("Notepad", "File", nullptr));
     } // retranslateUi
 

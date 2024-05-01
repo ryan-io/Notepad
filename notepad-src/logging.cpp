@@ -4,27 +4,43 @@
 #include <QDebug>
 #include <thread>
 
-void Log::info(QString msg) {
-  process("INFO: " + msg);
-  qInfo() << msg;
-}
-
-void Log::warning(QString msg) {
-  process("WARNING: " + msg);
-  qWarning() << msg;
-}
-
-void Log::error(QString msg) {
-  process("ERROR: " + msg);
-  qCritical() << msg;
-}
-
 QString Log::logDirectory() { return m_content.directory(); }
 
-void Log::process(QString msg) {
-  TextWriter tw{};
-  tw.writeAppend(m_content, "Log - " + msg);
+QString Log::logName() { return m_content.getFileName(); }
 
-  TextSaver ts{m_content.directory()};
-  ts.save(&m_content, fileName);
+void Log::info(const QString &msg) { process(msg, Level::INFO); }
+
+void Log::warning(const QString &msg) { process(msg, Level::WARNING); }
+
+void Log::error(const QString &msg) { process(msg, Level::ERROR); }
+
+void Log::process(const QString &msg, Level level) {
+  if (m_output & OutputLevel::None) {
+    return;
+  }
+
+  if (m_output & OutputLevel::Console) {
+    switch (level) {
+    case Log::INFO:
+      qInfo() << msg;
+      break;
+    case Log::WARNING:
+      qWarning() << msg;
+      break;
+    case Log::ERROR:
+      qCritical() << msg;
+      break;
+    }
+  }
+
+  if (m_output & OutputLevel::Text) {
+    // write to text file
+    /*
+     *   TextWriter tw{};
+tw.writeAppend(m_content, "Log - " + msg);
+
+TextSaver ts{m_content.directory()};
+ts.save(&m_content, fileName);
+     */
+  }
 }

@@ -4,7 +4,7 @@
 
 class Content {
 public:
-  virtual QString &getContent() = 0;
+  virtual const QString &getContent() const = 0;
   virtual void setContent(const QString &newContent) = 0;
   virtual void appendContent(const QString &appendContent) = 0;
   ~Content() = default;
