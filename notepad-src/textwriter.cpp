@@ -1,23 +1,41 @@
 #include "textwriter.h"
 
-IOResponse TextWriter::write(QFile &file, QString content) {
-  const QString okOut = "Writing content to file object.";
-  // std::lock_guard<std::mutex> lock(m_writeLock);
+#include <QDir>
 
-  //  file.m_output.clear();
-  //  file.m_output.append(content);
-  //  file.m_output.append('\n');
+IOResponse TextWriter::WriteTo(const QString &name, const QString &directory,
+                               const QString &content,
+                               QIODeviceBase::OpenModeFlag flag) {
+  if (name.isEmpty())
+    return {true, FILE_NAME_EMPTY};
 
-  return {false, {std::make_pair("ok", okOut)}};
+  if (directory.isEmpty())
+    return {true, DIRECTORY_EMPTY};
+
+  if (content.isEmpty())
+    return {true, CONTENT_BLANK};
+
+  QFile check(directory + QDir::separator() + name);
+
+  if (!check.open(flag)) {
+    check.close();
+    return {true, CANNOT_OPEN};
+  }
+
+  QByteArray data{};
+
+  data.append(content.toUtf8() + '\n');
+  check.write(data);
+  check.close();
+
+  return {false, WroteSuccessfuly(check)};
 }
 
-IOResponse TextWriter::writeAppend(QFile &file, QString content) {
-  const QString okOut = "Appending content to file object.";
+IOResponse TextWriter::write(const QString &name, const QString &directory,
+                             const QString &content) {
+  return WriteTo(name, directory, content, QIODevice::WriteOnly);
+}
 
-  // std::lock_guard<std::mutex> lock(m_writeLock);
-
-  //  file.m_output.append(content);
-  //  file.m_output.append('\n');
-
-  return {false, {std::make_pair("ok", okOut)}};
+IOResponse TextWriter::append(const QString &name, const QString &directory,
+                              const QString &content) {
+  return WriteTo(name, directory, content, QIODevice::Append);
 }

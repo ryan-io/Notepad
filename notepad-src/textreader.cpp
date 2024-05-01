@@ -24,28 +24,19 @@ private:
 //      "filepath"-> ok; gets the file path read
 //      "content"-> ok; gets the content of the file read
 IOResponse TextReader::read(QWidget *parent, QString &filePath) {
-  if (filePath.isEmpty()) {
-    const QString fError = "File path is empty";
-    return IOResponse{true, {std::make_pair("error", fError)}};
-  };
+  if (filePath.isEmpty())
+    return {true, FILE_PATH_EMPTY};
 
-  QLockFile lockedFile(filePath);
-  QFile file(filePath);
+  QFile check(filePath);
 
-  if (!file.open(QIODevice::ReadOnly)) {
-    file.close();
-    return IOResponse{true, {std::make_pair("error", file.errorString())}};
+  if (!check.open(QIODevice::ReadOnly)) {
+    check.close();
+    return {true, CANNOT_OPEN};
   }
 
-  QTextStream str(&file);
+  QTextStream str(&check);
   const QString content = str.readAll();
+  check.close();
 
-  file.close();
-
-  std::unordered_map<std::string, QString> goodResponse =
-      std::unordered_map<std::string, QString>{
-          {std::make_pair("filepath", filePath)},
-          {std::make_pair("content", content)}};
-
-  return {false, goodResponse};
+  return {false, content};
 }

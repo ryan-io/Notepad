@@ -5,5 +5,5 @@
 
 struct IOResponse {
   bool isError;
-  std::unordered_map<std::string, QString> response;
+  QString message;
 };

@@ -75,22 +75,12 @@ void Log::logOutputTo() {
 }
 
 void Log::validateAndCreate(const QString &name) {
-  if ((m_output & OutputLevel::Console) == 0)
+  if ((m_output & OutputLevel::Text) == 0)
     return;
 
-  QFile check(QDir::currentPath() + QDir::separator() + name);
+  TextWriter tw{};
+  auto response = tw.append(name, QDir::currentPath(), time());
 
-  if (!check.open(QIODevice::WriteOnly)) {
-    qInfo() << "File cannot be opened. Possible locked by another process or "
-               "thread.";
-    check.close();
-    return;
-  }
-  qInfo() << "file: " << check.fileName();
-  QByteArray data{};
-
-  data.append(time().toUtf8());
-  check.write(data);
-
-  check.close();
+  if (response.isError)
+    qCritical() << response.message;
 }

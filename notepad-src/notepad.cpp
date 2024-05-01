@@ -37,32 +37,23 @@ void Notepad::on_actionNew_triggered() {
 }
 
 void Notepad::on_actionOpen_triggered() {
+  m_logger->info("Open signal triggered.");
+
   QString filePath = QFileDialog::getOpenFileName(this, "Open a file");
   TextReader reader{};
+  auto response = reader.read(this, filePath);
 
-  m_logger->info("onActionOpen invoked");
-  auto readResponse = reader.read(this, filePath);
-
-  if (readResponse.isError) {
-    m_logger->error(readResponse.response["error"]);
-    QMessageBox::warning(this, "Warning", readResponse.response["error"]);
+  if (response.isError) {
+    m_logger->error(response.message);
     return;
   }
 
-  m_logger->info("File read: " + readResponse.response["filepath"]);
-  m_logger->info("Setting in-memory file content");
-
-  //  TextWriter tw{};
-  //  // best practice to let the writer run any pre-processing
-  //  tw.write(m_file, readResponse.response["content"]);
-
-  //  ui->textEditor->setText(readResponse.response["content"]);
-  //  m_file.setFileName(readResponse.response["filepath"]);
-  //  setWindowTitle(readResponse.response["filepath"]);
+  m_logger->info("Setting text for ui-notepad.");
+  ui->textEditor->setText(response.message);
 }
 
 void Notepad::on_actionSave_triggered() {
-  m_logger->info("onActionSaved invoked");
+  m_logger->info("Save signal triggered.");
 
   //  TextSaver ts{m_file.directory()};
 
@@ -79,4 +70,6 @@ void Notepad::on_actionSave_triggered() {
   //    m_logger->info(response.response["ok"]);
 }
 
-void Notepad::on_actionSave_As_triggered() {}
+void Notepad::on_actionSave_As_triggered() {
+  m_logger->info("Save-as signal triggered.");
+}

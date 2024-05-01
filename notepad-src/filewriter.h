@@ -8,10 +8,13 @@
 class FileWriter {
 public:
   // writes and saves content to a file
-  virtual IOResponse write(QFile &file, QString content) = 0;
+  virtual IOResponse write(const QString &fileName, const QString &directory,
+                           const QString &content) = 0;
 
   // appens and saves contnet to a file
-  virtual IOResponse writeAppend(QFile &file, QString content) = 0;
+  virtual IOResponse append(const QString &fileName,
+                                 const QString &directory,
+                                 const QString &content) = 0;
 
   virtual ~FileWriter() = default;
 };
