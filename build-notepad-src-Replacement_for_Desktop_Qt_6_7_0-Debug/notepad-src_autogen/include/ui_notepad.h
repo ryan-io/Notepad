@@ -29,6 +29,8 @@ public:
     QAction *actionOpen;
     QAction *actionSave;
     QAction *actionSave_As;
+    QAction *actionFont;
+    QAction *actionFont_Size;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
@@ -36,6 +38,7 @@ public:
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *file;
+    QMenu *menuSet_Font;
 
     void setupUi(QMainWindow *Notepad)
     {
@@ -63,6 +66,10 @@ public:
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/save_as.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSave_As->setIcon(icon3);
+        actionFont = new QAction(Notepad);
+        actionFont->setObjectName("actionFont");
+        actionFont_Size = new QAction(Notepad);
+        actionFont_Size->setObjectName("actionFont_Size");
         centralwidget = new QWidget(Notepad);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -88,9 +95,12 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 22));
         file = new QMenu(menubar);
         file->setObjectName("file");
+        menuSet_Font = new QMenu(menubar);
+        menuSet_Font->setObjectName("menuSet_Font");
         Notepad->setMenuBar(menubar);
 
         menubar->addAction(file->menuAction());
+        menubar->addAction(menuSet_Font->menuAction());
         file->addSeparator();
         file->addSeparator();
         file->addSeparator();
@@ -98,6 +108,9 @@ public:
         file->addAction(actionOpen);
         file->addAction(actionSave);
         file->addAction(actionSave_As);
+        menuSet_Font->addAction(actionFont);
+        menuSet_Font->addSeparator();
+        menuSet_Font->addAction(actionFont_Size);
 
         retranslateUi(Notepad);
 
@@ -114,7 +127,10 @@ public:
         actionSave->setToolTip(QCoreApplication::translate("Notepad", "Save", nullptr));
 #endif // QT_CONFIG(tooltip)
         actionSave_As->setText(QCoreApplication::translate("Notepad", "Save As", nullptr));
+        actionFont->setText(QCoreApplication::translate("Notepad", "Font", nullptr));
+        actionFont_Size->setText(QCoreApplication::translate("Notepad", "Font Size", nullptr));
         file->setTitle(QCoreApplication::translate("Notepad", "File", nullptr));
+        menuSet_Font->setTitle(QCoreApplication::translate("Notepad", "Set", nullptr));
     } // retranslateUi
 
 };

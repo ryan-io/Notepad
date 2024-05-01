@@ -27,26 +27,20 @@ void Log::process(const QString &msg, Level level) {
   if (m_output & OutputLevel::Console) {
     switch (level) {
     case Log::INFO:
-      qInfo() << msg;
+      qInfo() << time() << msg;
       break;
     case Log::WARNING:
-      qWarning() << msg;
+      qWarning() << time() << msg;
       break;
     case Log::ERROR:
-      qCritical() << msg;
+      qCritical() << time() << msg;
       break;
     }
   }
 
   if (m_output & OutputLevel::Text) {
-    // write to text file
-    /*
-     *   TextWriter tw{};
-tw.writeAppend(m_content, "Log - " + msg);
-
-TextSaver ts{m_content.directory()};
-ts.save(&m_content, fileName);
-     */
+    TextWriter tw{};
+    tw.append(m_fileName, logDirectory(), msg);
   }
 }
 
@@ -81,6 +75,6 @@ void Log::validateAndCreate(const QString &name) {
   TextWriter tw{};
   auto response = tw.append(name, QDir::currentPath(), time());
 
-  if (response.isError)
-    qCritical() << response.message;
+  if (response.error())
+    qCritical() << response.message();
 }

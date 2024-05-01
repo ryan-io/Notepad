@@ -25,18 +25,18 @@ private:
 //      "content"-> ok; gets the content of the file read
 IOResponse TextReader::read(QWidget *parent, QString &filePath) {
   if (filePath.isEmpty())
-    return {true, FILE_PATH_EMPTY};
+    return {true, FILE_PATH_EMPTY, nullptr};
 
-  QFile check(filePath);
+  auto check = std::make_shared<QFile>(filePath, parent);
 
-  if (!check.open(QIODevice::ReadOnly)) {
-    check.close();
-    return {true, CANNOT_OPEN};
+  if (!check->open(QIODevice::ReadOnly)) {
+    check->close();
+    return {true, CANNOT_OPEN, check};
   }
 
-  QTextStream str(&check);
+  QTextStream str(check.get());
   const QString content = str.readAll();
-  check.close();
+  check->close();
 
-  return {false, content};
+  return {false, content, check};
 }

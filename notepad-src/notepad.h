@@ -1,5 +1,7 @@
 #pragma once
 
+#include <QFile>
+#include <QFileInfo>
 #include <QMainWindow>
 
 #include "logging.h"
@@ -26,7 +28,14 @@ private slots:
 
   void on_actionSave_As_triggered();
 
+  void on_actionFont_triggered();
+
+  void on_actionFont_Size_triggered();
+
 private:
+  void Save(QFileInfo &info);
+
   Ui::Notepad *ui;
   Log *m_logger;
+  QString m_openedFile;
 };

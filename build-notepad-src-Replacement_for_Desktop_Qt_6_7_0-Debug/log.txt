@@ -8,3 +8,132 @@ Wed May 1 07:37:30 2024
 Wed May 1 07:38:55 2024
 Wed May 1 08:56:43 2024
 Wed May 1 09:13:34 2024
+Wed May 1 10:32:17 2024
+Wed May 1 11:15:03 2024
+Wed May 1 11:18:48 2024
+Wed May 1 11:24:50 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeCache.txt
+Setting text for ui-notepad.
+New signal triggered.
+Wed May 1 11:33:39 2024
+Logging started...
+Save signal triggered.
+Wed May 1 11:34:11 2024
+Logging started...
+Save signal triggered.
+Wed May 1 11:34:34 2024
+Logging started...
+Save signal triggered.
+Wed May 1 11:37:58 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/CMakeCache.txt
+Setting text for ui-notepad.
+New signal triggered.
+Save signal triggered.
+Save signal triggered.
+Wed May 1 11:39:33 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Save signal triggered.
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/log.txt
+Setting text for ui-notepad.
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Open signal triggered.
+No file path was provided
+Wed May 1 11:40:15 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Save signal triggered.
+New signal triggered.
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Wed May 1 11:46:43 2024
+Logging started...
+Save-as signal triggered.
+No file name was provided.
+Wed May 1 11:47:29 2024
+Logging started...
+Save-as signal triggered.
+No file selected after save-as command invoked.
+Save-as signal triggered.
+No file selected after save-as command invoked.
+Save signal triggered.
+Wed May 1 11:48:27 2024
+Logging started...
+Open signal triggered.
+No file path was provided
+Wed May 1 11:48:56 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Save signal triggered.
+Succesfully wrote to /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Wed May 1 11:49:32 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Save-as signal triggered.
+Succesfully wrote to /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc23.txt
+New signal triggered.
+Wed May 1 11:52:37 2024
+Logging started...
+Wed May 1 11:52:40 2024
+Logging started...
+Wed May 1 11:53:48 2024
+Logging started...
+Wed May 1 11:54:42 2024
+Logging started...
+Wed May 1 11:55:51 2024
+Logging started...
+Wed May 1 11:56:25 2024
+Logging started...
+Wed May 1 11:58:22 2024
+Logging started...
+Wed May 1 11:58:31 2024
+Logging started...
+Wed May 1 11:59:22 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Wed May 1 11:59:34 2024
+Logging started...
+Save signal triggered.
+Succesfully wrote to /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Wed May 1 11:59:54 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Setting text for ui-notepad.
+Save signal triggered.
+Succesfully wrote to /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc.txt
+Wed May 1 12:02:57 2024
+Logging started...
+Wed May 1 12:03:26 2024
+Logging started...
+Open signal triggered.
+Opened file at: /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc23.txt
+Setting text for ui-notepad.
+Save signal triggered.
+Succesfully wrote to /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/testdoc23.txt
+Save-as signal triggered.
+No file selected after save-as command invoked.
+Wed May 1 12:06:13 2024
+Logging started...
+Wed May 1 12:09:59 2024
+Logging started...
+Wed May 1 12:10:21 2024
+Logging started...

@@ -7,9 +7,9 @@
 // bitwise 'or' these together to log to multiple outputs
 class OutputLevel {
 public:
-  static constexpr int_fast8_t None = 0x1;
-  static constexpr int_fast8_t Console = 0x2;
-  static constexpr int_fast8_t Text = 0x3;
+  static constexpr int None = 0x1;
+  static constexpr int Console = 0x2;
+  static constexpr int Text = 0x3;
 };
 
 class Log {

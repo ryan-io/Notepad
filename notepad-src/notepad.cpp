@@ -6,6 +6,7 @@
 #include "QTextStream"
 #include "textreader.h"
 #include "textwriter.h"
+#include <QFontDialog>
 
 Notepad::Notepad(QApplication *app, Log *logger, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::Notepad), m_logger(logger) {
@@ -14,26 +15,24 @@ Notepad::Notepad(QApplication *app, Log *logger, QWidget *parent)
 
 Notepad::~Notepad() { delete ui; }
 
+void Notepad::Save(QFileInfo &info) {
+  TextWriter tw{};
+  auto response =
+      tw.write(info.fileName(), info.path(), ui->textEditor->toPlainText());
+
+  setWindowTitle(info.fileName());
+
+  if (response.error())
+    m_logger->error(response.message());
+  else
+    m_logger->info(response.message());
+}
+
 void Notepad::on_actionNew_triggered() {
-  if (m_logger) {
-    m_logger->info("onNewDocument invoked");
-  } else {
-    qWarning() << "No logger supplied";
-  }
-
-  //  TextResetter tr{};
-  //  // clears string; invokes QString.clear()
-  //  auto resetResponse = tr.reset(&m_file);
-
-  //  if (m_logger) {
-  //    if (resetResponse.isError)
-  //      m_logger->error(resetResponse.response["error"]);
-  //    else
-  //      m_logger->info(resetResponse.response["ok"]);
-  //  }
-
-  //  // set the text in the editor to an empty string
-  //  ui->textEditor->setText(m_file.getContent());
+  m_logger->info("New signal triggered.");
+  ui->textEditor->setText("");
+  m_openedFile = "";
+  setWindowTitle("unnamed");
 }
 
 void Notepad::on_actionOpen_triggered() {
@@ -43,33 +42,65 @@ void Notepad::on_actionOpen_triggered() {
   TextReader reader{};
   auto response = reader.read(this, filePath);
 
-  if (response.isError) {
-    m_logger->error(response.message);
+  if (response.error()) {
+    m_logger->error(response.message());
     return;
   }
 
+  m_logger->info("Opened file at: " + response.file().fileName());
   m_logger->info("Setting text for ui-notepad.");
-  ui->textEditor->setText(response.message);
+  ui->textEditor->setText(response.message());
+  m_openedFile = response.file().fileName();
+
+  QFileInfo info(response.file().fileName());
+  setWindowTitle(info.fileName());
 }
 
 void Notepad::on_actionSave_triggered() {
   m_logger->info("Save signal triggered.");
 
-  //  TextSaver ts{m_file.directory()};
+  QString saveFileName{};
 
-  //  // if (m_file.getFileName ().isEmpty ()) {
-  //  auto newName = QFileDialog::getSaveFileName(this, "Save");
-  //  //}
+  if (m_openedFile.isEmpty()) {
+    saveFileName = QFileDialog::getSaveFileName(this);
+    m_openedFile = saveFileName;
+  } else {
+    saveFileName = m_openedFile;
+  }
 
-  //  qInfo() << "Saving as " << newName;
-  //  auto response = ts.save(&m_file, newName, QIODevice::WriteOnly);
+  if (saveFileName.isEmpty())
+    return;
 
-  //  if (response.isError)
-  //    m_logger->error(response.response["error"]);
-  //  else
-  //    m_logger->info(response.response["ok"]);
+  auto info = QFileInfo(saveFileName);
+  Save(info);
 }
 
 void Notepad::on_actionSave_As_triggered() {
   m_logger->info("Save-as signal triggered.");
+
+  auto saveFileName = QFileDialog::getSaveFileName(this);
+
+  if (saveFileName.isEmpty()) {
+    m_logger->info("No file selected after save-as command invoked.");
+    return;
+  }
+  m_openedFile = saveFileName;
+
+  auto info = QFileInfo(saveFileName);
+  Save(info);
+}
+
+void Notepad::on_actionFont_triggered() {
+  bool fontSelected;
+  QFont font = QFontDialog::getFont(&fontSelected, this);
+
+  if (fontSelected)
+    ui->textEditor->setFont(font);
+}
+
+void Notepad::on_actionFont_Size_triggered() {
+  QTextCursor cursor = ui->textEditor->textCursor();
+  ui->textEditor->selectAll();
+  ui->textEditor->setFontPointSize(16);
+  ui->textEditor->setTextCursor(cursor);
 }
