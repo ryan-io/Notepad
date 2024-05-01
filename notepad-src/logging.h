@@ -1,7 +1,5 @@
 #pragma once
 
-#include "file.h"
-
 #include <QApplication>
 #include <QDateTime>
 #include <QObject>
@@ -19,7 +17,11 @@ public:
   enum Level { INFO = 1 << 0, WARNING = 1 << 1, ERROR = 1 << 2 };
 
   Log(const QString &name, QApplication *app, const int_fast8_t output = 0)
-      : m_content(File{app, name}), m_output(output) {}
+      : m_output(output), m_fileName(name) {
+    logOs();
+    logOutputTo();
+    validateAndCreate(name);
+  }
 
   ~Log() {}
 
@@ -28,9 +30,14 @@ public:
   void error(const QString &msg);
   QString logDirectory();
   QString logName();
+  QString time();
 
 private:
-  int_fast8_t m_output;
-  File m_content;
+  int_fast8_t m_output{0};
+  QString m_fileName{""};
+
   void process(const QString &msg, Level level);
+  void logOutputTo();
+  void validateAndCreate(const QString &name);
+  static void logOs();
 };

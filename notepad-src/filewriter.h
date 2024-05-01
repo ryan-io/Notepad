@@ -1,15 +1,17 @@
-#include "file.h"
 #include "ioresponse.h"
 
+#include <QFile>
 #include <QString>
 
 #pragma once
 
 class FileWriter {
 public:
-  // writes to the internal QString buffer
-  virtual IOResponse write(File &file, QString content) = 0;
-  virtual IOResponse writeAppend(File &file, QString content) = 0;
+  // writes and saves content to a file
+  virtual IOResponse write(QFile &file, QString content) = 0;
+
+  // appens and saves contnet to a file
+  virtual IOResponse writeAppend(QFile &file, QString content) = 0;
 
   virtual ~FileWriter() = default;
 };

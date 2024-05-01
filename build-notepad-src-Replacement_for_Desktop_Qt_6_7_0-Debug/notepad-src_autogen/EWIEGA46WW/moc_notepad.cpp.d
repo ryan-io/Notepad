@@ -1,12 +1,8 @@
 /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/EWIEGA46WW/moc_notepad.cpp: /home/ryanio/Documents/dev/qt/Notepad/notepad-src/notepad.h \
   /home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/moc_predefs.h \
-  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/content.h \
-  /home/ryanio/Documents/dev/qt/Notepad/notepad-src/file.h \
   /home/ryanio/Documents/dev/qt/Notepad/notepad-src/logging.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/QDateTime \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/QDir \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/QObject \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/QString \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20functional.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20memory.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/q20type_traits.h \
@@ -45,14 +41,10 @@
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qdatetime.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qdeadlinetimer.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qdebug.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qdir.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qelapsedtimer.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qendian.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qeventloop.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qexceptionhandling.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qfile.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qfiledevice.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qfileinfo.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qflags.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qfloat16.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qforeach.h \
@@ -63,7 +55,6 @@
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qglobalstatic.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qhash.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qhashfunctions.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qiodevice.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qiodevicebase.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qiterable.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qiterator.h \
@@ -123,7 +114,6 @@
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtdeprecationmarkers.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtenvironmentvariables.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtextstream.h \
-  /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtimezone.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtmetamacros.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtnoop.h \
   /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore/qtpreprocessorsupport.h \
@@ -194,13 +184,10 @@
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/bits/basic_string.tcc \
   /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/charconv.h \
-  /usr/include/c++/11/bits/codecvt.h \
   /usr/include/c++/11/bits/concept_check.h \
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
@@ -210,10 +197,6 @@
   /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/exception_defines.h \
   /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_fwd.h \
-  /usr/include/c++/11/bits/fs_ops.h \
-  /usr/include/c++/11/bits/fs_path.h \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/hash_bytes.h \
@@ -221,37 +204,27 @@
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/ios_base.h \
-  /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/list.tcc \
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
   /usr/include/c++/11/bits/move.h \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/shared_ptr.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
   /usr/include/c++/11/bits/shared_ptr_base.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/stl_bvector.h \
@@ -278,7 +251,6 @@
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
@@ -289,7 +261,6 @@
   /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/codecvt \
   /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
@@ -297,7 +268,6 @@
   /usr/include/c++/11/cstring \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/cwchar \
-  /usr/include/c++/11/cwctype \
   /usr/include/c++/11/debug/assertions.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/exception \
@@ -309,31 +279,22 @@
   /usr/include/c++/11/ext/numeric_traits.h \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/ext/type_traits.h \
-  /usr/include/c++/11/filesystem \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/initializer_list \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/ios \
   /usr/include/c++/11/iosfwd \
-  /usr/include/c++/11/istream \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/list \
-  /usr/include/c++/11/locale \
   /usr/include/c++/11/map \
   /usr/include/c++/11/memory \
-  /usr/include/c++/11/mutex \
   /usr/include/c++/11/new \
   /usr/include/c++/11/numeric \
   /usr/include/c++/11/optional \
-  /usr/include/c++/11/ostream \
   /usr/include/c++/11/pstl/execution_defs.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
   /usr/include/c++/11/ratio \
-  /usr/include/c++/11/shared_mutex \
-  /usr/include/c++/11/sstream \
   /usr/include/c++/11/stdexcept \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
@@ -363,7 +324,6 @@
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
@@ -378,7 +338,6 @@
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
-  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -442,7 +401,6 @@
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
@@ -450,14 +408,10 @@
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \

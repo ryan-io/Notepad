@@ -2,7 +2,6 @@
 
 #include <QMainWindow>
 
-#include "file.h"
 #include "logging.h"
 
 QT_BEGIN_NAMESPACE
@@ -30,5 +29,4 @@ private slots:
 private:
   Ui::Notepad *ui;
   Log *m_logger;
-  File m_file;
 };

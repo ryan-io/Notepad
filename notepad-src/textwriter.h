@@ -10,8 +10,8 @@ public:
   ~TextWriter() override = default;
 
   // FileWriter interface
-  IOResponse write(File &file, QString content) override;
-  IOResponse writeAppend(File &file, QString content) override;
+  IOResponse write(QFile &file, QString content) override;
+  IOResponse writeAppend(QFile &file, QString content) override;
 
 private:
   std::mutex m_writeLock;

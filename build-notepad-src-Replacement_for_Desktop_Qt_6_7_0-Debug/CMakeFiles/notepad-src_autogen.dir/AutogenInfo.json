@@ -414,27 +414,15 @@
 			null
 		],
 		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/file.h",
+			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecreator.h",
 			"MU",
-			"EWIEGA46WW/moc_file.cpp",
+			"EWIEGA46WW/moc_filecreator.cpp",
 			null
 		],
 		[
 			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filereader.h",
 			"MU",
 			"EWIEGA46WW/moc_filereader.cpp",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/fileresetter.h",
-			"MU",
-			"EWIEGA46WW/moc_fileresetter.cpp",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filesaver.h",
-			"MU",
-			"EWIEGA46WW/moc_filesaver.cpp",
 			null
 		],
 		[
@@ -465,18 +453,6 @@
 			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textreader.h",
 			"MU",
 			"EWIEGA46WW/moc_textreader.cpp",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textresetter.h",
-			"MU",
-			"EWIEGA46WW/moc_textresetter.cpp",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textsaver.h",
-			"MU",
-			"EWIEGA46WW/moc_textsaver.cpp",
 			null
 		],
 		[
@@ -547,7 +523,7 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/file.cpp",
+			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecreator.cpp",
 			"MU",
 			null
 		],
@@ -568,16 +544,6 @@
 		],
 		[
 			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textreader.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textresetter.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/ryanio/Documents/dev/qt/Notepad/notepad-src/textsaver.cpp",
 			"MU",
 			null
 		],

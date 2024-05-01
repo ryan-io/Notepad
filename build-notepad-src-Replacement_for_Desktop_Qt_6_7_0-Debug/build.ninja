@@ -81,25 +81,9 @@ build CMakeFiles/notepad-src.dir/logging.cpp.o: CXX_COMPILER__notepad-src_Debug 
   OBJECT_DIR = CMakeFiles/notepad-src.dir
   OBJECT_FILE_DIR = CMakeFiles/notepad-src.dir
 
-build CMakeFiles/notepad-src.dir/file.cpp.o: CXX_COMPILER__notepad-src_Debug /home/ryanio/Documents/dev/qt/Notepad/notepad-src/file.cpp || cmake_object_order_depends_target_notepad-src
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/notepad-src.dir/file.cpp.o.d
-  FLAGS = -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug -I/home/ryanio/Documents/dev/qt/Notepad/notepad-src -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/ryanio/Qt/6.7.0/gcc_64/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtGui
-  OBJECT_DIR = CMakeFiles/notepad-src.dir
-  OBJECT_FILE_DIR = CMakeFiles/notepad-src.dir
-
 build CMakeFiles/notepad-src.dir/textreader.cpp.o: CXX_COMPILER__notepad-src_Debug /home/ryanio/Documents/dev/qt/Notepad/notepad-src/textreader.cpp || cmake_object_order_depends_target_notepad-src
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/notepad-src.dir/textreader.cpp.o.d
-  FLAGS = -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug -I/home/ryanio/Documents/dev/qt/Notepad/notepad-src -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/ryanio/Qt/6.7.0/gcc_64/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtGui
-  OBJECT_DIR = CMakeFiles/notepad-src.dir
-  OBJECT_FILE_DIR = CMakeFiles/notepad-src.dir
-
-build CMakeFiles/notepad-src.dir/textresetter.cpp.o: CXX_COMPILER__notepad-src_Debug /home/ryanio/Documents/dev/qt/Notepad/notepad-src/textresetter.cpp || cmake_object_order_depends_target_notepad-src
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/notepad-src.dir/textresetter.cpp.o.d
   FLAGS = -g -fPIC -std=gnu++17
   INCLUDES = -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug -I/home/ryanio/Documents/dev/qt/Notepad/notepad-src -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/ryanio/Qt/6.7.0/gcc_64/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/notepad-src.dir
@@ -113,9 +97,9 @@ build CMakeFiles/notepad-src.dir/textwriter.cpp.o: CXX_COMPILER__notepad-src_Deb
   OBJECT_DIR = CMakeFiles/notepad-src.dir
   OBJECT_FILE_DIR = CMakeFiles/notepad-src.dir
 
-build CMakeFiles/notepad-src.dir/textsaver.cpp.o: CXX_COMPILER__notepad-src_Debug /home/ryanio/Documents/dev/qt/Notepad/notepad-src/textsaver.cpp || cmake_object_order_depends_target_notepad-src
+build CMakeFiles/notepad-src.dir/filecreator.cpp.o: CXX_COMPILER__notepad-src_Debug /home/ryanio/Documents/dev/qt/Notepad/notepad-src/filecreator.cpp || cmake_object_order_depends_target_notepad-src
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/notepad-src.dir/textsaver.cpp.o.d
+  DEP_FILE = CMakeFiles/notepad-src.dir/filecreator.cpp.o.d
   FLAGS = -g -fPIC -std=gnu++17
   INCLUDES = -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug -I/home/ryanio/Documents/dev/qt/Notepad/notepad-src -I/home/ryanio/Documents/dev/qt/Notepad/build-notepad-src-Replacement_for_Desktop_Qt_6_7_0-Debug/notepad-src_autogen/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtCore -isystem /home/ryanio/Qt/6.7.0/gcc_64/include -isystem /home/ryanio/Qt/6.7.0/gcc_64/mkspecs/linux-g++ -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtWidgets -isystem /home/ryanio/Qt/6.7.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/notepad-src.dir
@@ -137,7 +121,7 @@ build CMakeFiles/notepad-src.dir/notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp.o
 #############################################
 # Link the executable notepad-src
 
-build notepad-src: CXX_EXECUTABLE_LINKER__notepad-src_Debug CMakeFiles/notepad-src.dir/notepad-src_autogen/mocs_compilation.cpp.o CMakeFiles/notepad-src.dir/main.cpp.o CMakeFiles/notepad-src.dir/notepad.cpp.o CMakeFiles/notepad-src.dir/logging.cpp.o CMakeFiles/notepad-src.dir/file.cpp.o CMakeFiles/notepad-src.dir/textreader.cpp.o CMakeFiles/notepad-src.dir/textresetter.cpp.o CMakeFiles/notepad-src.dir/textwriter.cpp.o CMakeFiles/notepad-src.dir/textsaver.cpp.o CMakeFiles/notepad-src.dir/notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp.o | /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || notepad-src_autogen notepad-src_autogen_timestamp_deps
+build notepad-src: CXX_EXECUTABLE_LINKER__notepad-src_Debug CMakeFiles/notepad-src.dir/notepad-src_autogen/mocs_compilation.cpp.o CMakeFiles/notepad-src.dir/main.cpp.o CMakeFiles/notepad-src.dir/notepad.cpp.o CMakeFiles/notepad-src.dir/logging.cpp.o CMakeFiles/notepad-src.dir/textreader.cpp.o CMakeFiles/notepad-src.dir/textwriter.cpp.o CMakeFiles/notepad-src.dir/filecreator.cpp.o CMakeFiles/notepad-src.dir/notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp.o | /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || notepad-src_autogen notepad-src_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/home/ryanio/Qt/6.7.0/gcc_64/lib  /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0  /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Gui.so.6.7.0  /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/notepad-src.dir
@@ -204,7 +188,7 @@ build notepad-src_autogen/4UGIYD6VGQ/qrc_images.cpp | ${cmake_ninja_workdir}note
 #############################################
 # Phony custom command for CMakeFiles/notepad-src_autogen_timestamp_deps
 
-build CMakeFiles/notepad-src_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/notepad-src_autogen_timestamp_deps: phony /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/./libexec/uic /home/ryanio/Qt/6.7.0/gcc_64/./libexec/moc /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0
+build CMakeFiles/notepad-src_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/notepad-src_autogen_timestamp_deps: phony /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Widgets.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/lib/libQt6Core.so.6.7.0 /home/ryanio/Qt/6.7.0/gcc_64/./libexec/uic /home/ryanio/Qt/6.7.0/gcc_64/./libexec/moc
 
 
 #############################################
